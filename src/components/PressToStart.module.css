@@ -1,0 +1,126 @@
+@-webkit-keyframes tada {
+    0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes tada {
+    0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+}
+
+.flash {
+    -webkit-animation-name: flash;
+    animation-name: flash;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes flash {
+    0%, 50%, 100% {
+    opacity: 1;
+    }
+    25%, 75% {
+    opacity: 0;
+    }
+}
+    
+@keyframes flash {
+    0%, 50%, 100% {
+    opacity: 1;
+    }
+    25%, 75% {
+    opacity: 0;
+    }
+}
+
+.backgroundImageContainer {
+    position: relative;
+    background-image: url("../assets/spaceHorse.png");
+    background-size: 100% 110%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.startTextContainer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.startTextContainer h1 {
+    margin: 0;
+}
+
+.clickToStart {
+    cursor: pointer;
+    color: var(--custom-white);
+}
+
+.clickToStart:hover {
+    color: var(--custom-grey);
+    -webkit-animation-name: tada;
+    animation-name: tada;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@media (max-width: 1115px) {
+    .backgroundImageContainer {
+        background-size: 100% 100%;
+    }
+}
+
+@media (max-width: 749px) {
+    .backgroundImageContainer {
+        background-size: 100% 100%;
+    }
+}
+
+@media (max-width: 399px) {
+    .backgroundImageContainer {
+        background-size: 120% 100%;
+    }
+}
